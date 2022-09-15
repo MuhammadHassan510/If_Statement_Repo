@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Grade Finder | If Else Statements</title>
+</head>
+<body>
+
+    <h1>Student Grade Finder</h1>
+
+    <form onsubmit="studentGrade(); return false">
+        
+        <h3>
+            Type In Your Obtained Percentage : <input type="number" min="0" max="100" id="inputGrade" required>%
+        </h3>
+        <h1 id="userGrade">
+
+        </h1>
+
+    </form>
+
+    <script>
+
+        let userInput = +document.querySelector("#inputGrade").value;
+
+        function studentGrade(){
+            if(userInput >= 80){
+                document.querySelector("#userGrade").innerHTML="Excellent You Got A1 Grade ! Congratulations ...";
+            } else if(userInput >= 70){
+                document.querySelector("#userGrade").innerHTML="Great You Got A Grade ! Congratulations ...";
+            } else if(userInput >= 60){
+                document.querySelector("#userGrade").innerHTML="Keep It Up You Got B Grade ! Congratulations ...";
+            } else if(userInput >= 50){
+                document.querySelector("#userGrade").innerHTML="Good Work You Got C Grade ! You Can Perform Better ...";
+            } else if(userInput >= 40){
+                document.querySelector("#userGrade").innerHTML="You Got D Grade ! You Should Work Hard ...";
+            } else if(userInput >= 35){
+                document.querySelector("#userGrade").innerHTML="You Got E Grade ! You Are In A Very Poor Condition ...";
+            } else if(userInput >= 30){
+                document.querySelector("#userGrade").innerHTML="You Got FAIL ! You Are Not Achieving Your Goals ...";
+            }
+
+        }
+
+    </script>
+</body>
+</html>
